@@ -58,7 +58,7 @@ public class DBaccess
    /**
    @roseuid 5470EB5A020E
     */
-   public String queryCourseName()
+   public String queryCourseName( String courseID )
    {
        System.out.println( "Message: class name: DBaccess; methodName: queryCourseName" );
        return courseName;
@@ -67,7 +67,7 @@ public class DBaccess
    /**
    @roseuid 5470EB6503BD
     */
-   public String queryCourseNumber()
+   public String queryCourseNumber( String courseName )
    {
        System.out.println( "Message: class name: DBaccess; methodName: queryCourseNumber" );
        return courseID;

@@ -42,4 +42,5 @@ public class CourseSection
        System.out.println( "Message: class name: CourseSection; methodName: getCourseSectionInfo" );
        return theDBaccess.queryCourseSectionInfo();
    }
+
 }

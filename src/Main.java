@@ -2,7 +2,8 @@ public class Main {
 
     public static void main(String[] args)
     {
-        // TODO: Implement the rest of the dbaccess methods
+
+
         DBaccess dBaccess = new DBaccess();
 
         Semester semester = new Semester( dBaccess, 1 );
@@ -24,9 +25,10 @@ public class Main {
 
         Course course = new Course( dBaccess, "Data Communications", "COMP3721");
         course.getSemester();
-        course.getCourseName();
-        course.getCourseNumber();
+        course.getCourseName( "COMP3721" );
+        course.getCourseNumber( "Data Communications" );
         course.getCourseSelection();
+        course.removeCourseSection( "COMP3721 ");
         course.addCourseSection( courseSection );
 
         Schedule schedule = new Schedule( dBaccess );

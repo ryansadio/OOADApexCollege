@@ -35,23 +35,29 @@ public class Course
        System.out.println( "Message: class name: Course; methodName: getCourseSelection" );
        return "Your selection";
    }
+
+    public void removeCourseSection( String courseSectionID )
+    {
+        System.out.println( "Message: class name: Course; methodName: removeCourseSection" );
+        theDBaccess.removeCourseSection( courseSectionID );
+    }
    
    /**
    @roseuid 5470E71702FC
     */
-   public String getCourseName()
+   public String getCourseName( String courseID )
    {
        System.out.println( "Message: class name: Course; methodName: getCourseName" );
-       return courseName;
+       return theDBaccess.queryCourseName( courseID );
    }
    
    /**
    @roseuid 5470E7200023
     */
-   public String getCourseNumber()
+   public String getCourseNumber( String courseName )
    {
        System.out.println( "Message: class name: Course; methodName: getCourseNumber" );
-       return couseID;
+       return theDBaccess.queryCourseNumber( courseName );
    }
 
     public void addCourseSection( CourseSection courseSection )
