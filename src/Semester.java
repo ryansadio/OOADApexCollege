@@ -9,17 +9,21 @@ public class Semester
    
    /**
    @roseuid 5470FF0D0003
+    * @param i
     */
-   public Semester() 
+   public Semester( DBaccess dBaccess, int i )
    {
-    
+       theDBaccess = dBaccess;
+       semesterID = i;
+       System.out.println( "Message: class name: Semester; methodName: Constructor" );
    }
    
    /**
    @roseuid 5470EA7700DC
     */
-   public void getSemester() 
+   public int getSemester()
    {
-    
+       System.out.println( "Message: class name: Semester; methodName: getSemester" );
+       return theDBaccess.querySemester();
    }
 }
